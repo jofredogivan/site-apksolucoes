@@ -70,7 +70,7 @@
 
             </nav>
 
-            <a href="#" class="btn btn--primary">
+            <a href="#" class="btn btn--primary open-modal-btn">
 
                 Solicitar Demonstração
 
@@ -118,7 +118,7 @@
 
                 <div class="hero__buttons">
 
-                    <a href="#" class="btn btn--primary">
+                    <a href="#" class="btn btn--primary open-modal-btn">
 
                         Solicitar Demonstração
 
@@ -379,7 +379,6 @@
 
             <!-- Botão de Acesso Direto ao ERP -->
             <div style="text-align: center; margin-top: 50px;">
-                <!-- Altere 'erp.html' para o arquivo ou caminho real do seu ERP pronto -->
                 <a href="erp.html" class="btn btn--primary" target="_blank">
                     <span>Acessar APK One</span>
                     <i class="fa-solid fa-arrow-right"></i>
@@ -402,7 +401,7 @@
 
             </h2>
 
-            <a href="#" class="btn btn--primary">
+            <a href="#" class="btn btn--primary open-modal-btn">
 
                 Solicitar Orçamento
 
@@ -443,6 +442,48 @@
         </div>
 
     </footer>
+
+    <!--================ MODAL DE CONTATO ================-->
+
+    <div class="modal" id="demoModal">
+        <div class="modal__content">
+            <button class="modal__close" id="closeModal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div class="modal__header">
+                <h3>Solicitar Demonstração</h3>
+                <p>Preencha os dados abaixo e você será direcionado para o nosso WhatsApp com a mensagem pronta.</p>
+            </div>
+
+            <form class="modal__form" id="demoForm">
+                <div class="form-group" style="margin-bottom: 18px;">
+                    <label for="name" style="display:block; font-size:14px; font-weight:500; color:var(--color-black); margin-bottom:6px;">Nome completo</label>
+                    <input type="text" id="name" placeholder="Seu nome" required style="width:100%; padding:12px 16px; border:1px solid var(--color-border); border-radius:8px; background:var(--color-background);">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 18px;">
+                    <label for="company" style="display:block; font-size:14px; font-weight:500; color:var(--color-black); margin-bottom:6px;">Nome da Empresa</label>
+                    <input type="text" id="company" placeholder="Sua empresa" required style="width:100%; padding:12px 16px; border:1px solid var(--color-border); border-radius:8px; background:var(--color-background);">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 24px;">
+                    <label for="interest" style="display:block; font-size:14px; font-weight:500; color:var(--color-black); margin-bottom:6px;">Interesse principal</label>
+                    <select id="interest" style="width:100%; padding:12px 16px; border:1px solid var(--color-border); border-radius:8px; background:var(--color-background);">
+                        <option value="APK One / ERP">APK One / ERP</option>
+                        <option value="Sistema Personalizado">Sistema Personalizado</option>
+                        <option value="Dashboard / BI">Dashboard / BI</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn--primary" style="width:100%; justify-content:center;">
+                    <span>Enviar para o WhatsApp</span>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </button>
+            </form>
+        </div>
+    </div>
 
     <!-- JS -->
 
