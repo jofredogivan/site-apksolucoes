@@ -1,0 +1,498 @@
+/* ==========================================================
+   APK SOLUÇÕES
+   components.css
+   Componentes globais
+========================================================== */
+
+
+/* ==========================================================
+   BOTÕES
+========================================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-height:48px;
+
+    padding:14px 30px;
+
+    border-radius:var(--radius-round);
+
+    font-size:var(--font-size-md);
+
+    font-weight:var(--font-semibold);
+
+    line-height:1;
+
+    white-space:nowrap;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+
+}
+
+
+/* ==========================================================
+   BOTÃO PRIMÁRIO
+========================================================== */
+
+.btn--primary{
+
+    background:var(--gradient-primary);
+
+    color:var(--color-white);
+
+    border:2px solid transparent;
+
+    box-shadow:
+        0 15px 30px rgba(227,6,19,.20);
+
+}
+
+
+.btn--primary:hover{
+
+    color:var(--color-white);
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 20px 40px rgba(227,6,19,.35);
+
+}
+
+
+/* ==========================================================
+   BOTÃO SECUNDÁRIO
+========================================================== */
+
+.btn--secondary{
+
+    background:var(--color-white);
+
+    color:var(--color-black);
+
+    border:2px solid #ececec;
+
+}
+
+
+.btn--secondary:hover{
+
+    background:var(--color-black);
+
+    color:var(--color-white);
+
+    border-color:var(--color-black);
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ==========================================================
+   BOTÃO OUTLINE
+========================================================== */
+
+.btn--outline{
+
+    background:transparent;
+
+    color:var(--color-primary);
+
+    border:2px solid var(--color-primary);
+
+}
+
+
+.btn--outline:hover{
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+}
+
+
+/* ==========================================================
+   CARD GENÉRICO
+========================================================== */
+
+.card{
+
+    background:var(--color-white);
+
+    border:1px solid rgba(17,24,39,.06);
+
+    border-radius:var(--radius-lg);
+
+    padding:35px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+
+/* ==========================================================
+   SOLUTION CARD
+========================================================== */
+
+.solution-card{
+
+    position:relative;
+
+    min-height:150px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:30px;
+
+    background:var(--color-white);
+
+    border:1px solid #ececec;
+
+    border-radius:var(--radius-lg);
+
+    text-align:center;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition),
+        color var(--transition);
+
+}
+
+
+.solution-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--color-primary);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+
+.solution-card i{
+
+    font-size:42px;
+
+    color:var(--color-primary);
+
+    margin-bottom:10px;
+
+}
+
+
+.solution-card h3{
+
+    color:var(--color-black);
+
+    margin-bottom:5px;
+
+}
+
+
+.solution-card p{
+
+    color:var(--color-gray);
+
+}
+
+
+/* ==========================================================
+   DASHBOARD
+========================================================== */
+
+.dashboard{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.dashboard::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    top:-90px;
+
+    right:-90px;
+
+    border-radius:50%;
+
+    background:rgba(227,6,19,.08);
+
+    pointer-events:none;
+
+}
+
+
+.dashboard__card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.dashboard__card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:70px;
+
+    height:70px;
+
+    right:-30px;
+
+    bottom:-30px;
+
+    border-radius:50%;
+
+    background:rgba(227,6,19,.08);
+
+    pointer-events:none;
+
+}
+
+
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:8px 18px;
+
+    border-radius:var(--radius-round);
+
+    background:#ffecec;
+
+    color:var(--color-primary);
+
+    font-size:var(--font-size-sm);
+
+    font-weight:var(--font-semibold);
+
+}
+
+
+/* ==========================================================
+   ESTATÍSTICAS
+========================================================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+
+.stat{
+
+    background:var(--color-white);
+
+    border-radius:var(--radius-lg);
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+
+.stat h2{
+
+    color:var(--color-primary);
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+}
+
+
+.stat p{
+
+    color:var(--color-gray);
+
+}
+
+
+/* ==========================================================
+   GLASS
+========================================================== */
+
+.glass{
+
+    background:rgba(255,255,255,.70);
+
+    border:1px solid rgba(255,255,255,.40);
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
+
+}
+
+
+/* ==========================================================
+   CÍRCULO DE ÍCONE
+========================================================== */
+
+.icon-circle{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    background:#ffecec;
+
+    color:var(--color-primary);
+
+    font-size:28px;
+
+}
+
+
+/* ==========================================================
+   DIVISOR
+========================================================== */
+
+.divider{
+
+    width:90px;
+
+    height:5px;
+
+    margin:20px auto 0;
+
+    border-radius:var(--radius-round);
+
+    background:var(--gradient-primary);
+
+}
+
+
+/* ==========================================================
+   HOVER SCALE
+========================================================== */
+
+.hover-scale{
+
+    transition:
+        transform var(--transition);
+
+}
+
+
+.hover-scale:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+/* ==========================================================
+   FADE
+========================================================== */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+
+.fade.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}

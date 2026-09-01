@@ -1,0 +1,192 @@
+/* ==========================================================
+   APK SOLUÇÕES
+   Variables.css
+   Design System v1.1
+========================================================== */
+
+:root{
+
+    /* ===================================
+       CORES DA MARCA
+    =================================== */
+
+    --color-primary: #E30613;
+    --color-primary-dark: #C40010;
+    --color-primary-light: #FF4B5C;
+
+    --color-black: #111827;
+    --color-dark: #1F2937;
+    --color-gray-dark: #374151;
+    --color-gray: #6B7280;
+    --color-gray-light: #D1D5DB;
+    --color-background: #F8FAFC;
+    --color-white: #FFFFFF;
+
+    --color-success: #22C55E;
+    --color-warning: #F59E0B;
+    --color-danger: #EF4444;
+    --color-info: #2563EB;
+
+
+    /* ===================================
+       CORES DE INTERFACE
+    =================================== */
+
+    --color-text:
+        var(--color-black);
+
+    --color-text-light:
+        var(--color-gray);
+
+    --color-surface:
+        var(--color-white);
+
+    --color-surface-light:
+        var(--color-background);
+
+    --color-border:
+        var(--color-gray-light);
+
+    --color-focus:
+        rgba(227, 6, 19, .25);
+
+
+    /* ===================================
+       GRADIENTES
+    =================================== */
+
+    --gradient-primary:
+        linear-gradient(
+            135deg,
+            #E30613 0%,
+            #FF4040 100%
+        );
+
+    --gradient-dark:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1F2937
+        );
+
+    --gradient-light:
+        linear-gradient(
+            180deg,
+            #FFFFFF,
+            #F8FAFC
+        );
+
+
+    /* ===================================
+       TIPOGRAFIA
+    =================================== */
+
+    --font-primary:
+        "Poppins",
+        sans-serif;
+
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 22px;
+    --font-size-2xl: 28px;
+    --font-size-3xl: 36px;
+    --font-size-4xl: 48px;
+    --font-size-5xl: 60px;
+    --font-size-6xl: 72px;
+
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extra-bold: 800;
+
+    --line-height: 1.7;
+
+    --heading-line-height: 1.2;
+
+
+    /* ===================================
+       ESPAÇAMENTOS
+    =================================== */
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
+    --space-24: 96px;
+    --space-32: 128px;
+
+
+    /* ===================================
+       BORDER RADIUS
+    =================================== */
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-2xl: 32px;
+    --radius-round: 999px;
+
+
+    /* ===================================
+       SOMBRAS
+    =================================== */
+
+    --shadow-xs:
+        0 2px 4px rgba(0, 0, 0, .04);
+
+    --shadow-sm:
+        0 5px 15px rgba(0, 0, 0, .08);
+
+    --shadow-md:
+        0 10px 30px rgba(0, 0, 0, .12);
+
+    --shadow-lg:
+        0 20px 50px rgba(0, 0, 0, .15);
+
+    --shadow-xl:
+        0 30px 80px rgba(0, 0, 0, .18);
+
+
+    /* ===================================
+       TRANSIÇÕES
+    =================================== */
+
+    --transition-fast: .2s ease;
+    --transition: .35s ease;
+    --transition-slow: .6s ease;
+
+
+    /* ===================================
+       CONTAINER
+    =================================== */
+
+    --container-width: 1280px;
+
+
+    /* ===================================
+       HEADER
+    =================================== */
+
+    --header-height: 85px;
+
+
+    /* ===================================
+       Z-INDEX
+    =================================== */
+
+    --z-dropdown: 100;
+    --z-fixed: 500;
+    --z-modal: 1000;
+}

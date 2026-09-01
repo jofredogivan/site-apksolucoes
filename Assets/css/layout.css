@@ -1,0 +1,383 @@
+/* ==========================================================
+   APK SOLUÇÕES
+   components.css
+   Componentes globais do site
+========================================================== */
+
+
+/* ==========================================================
+   BOTÕES
+========================================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-height:48px;
+
+    padding:0 24px;
+
+    border-radius:var(--radius-md);
+
+    font-size:var(--font-size-md);
+
+    font-weight:var(--font-semibold);
+
+    white-space:nowrap;
+
+    cursor:pointer;
+
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast),
+        color var(--transition-fast);
+
+}
+
+
+/* ==========================================================
+   BOTÃO PRIMÁRIO
+========================================================== */
+
+.btn--primary{
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+    box-shadow:
+        0 8px 20px rgba(227,6,19,.18);
+
+}
+
+
+.btn--primary:hover{
+
+    background:var(--color-primary-dark);
+
+    color:var(--color-white);
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 28px rgba(227,6,19,.25);
+
+}
+
+
+/* ==========================================================
+   BOTÃO SECUNDÁRIO
+========================================================== */
+
+.btn--secondary{
+
+    background:var(--color-white);
+
+    color:var(--color-black);
+
+    border:1px solid var(--color-gray-light);
+
+}
+
+
+.btn--secondary:hover{
+
+    background:var(--color-black);
+
+    border-color:var(--color-black);
+
+    color:var(--color-white);
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ==========================================================
+   BOTÃO OUTLINE
+========================================================== */
+
+.btn--outline{
+
+    background:transparent;
+
+    color:var(--color-primary);
+
+    border:1px solid var(--color-primary);
+
+}
+
+
+.btn--outline:hover{
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+}
+
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+.card{
+
+    background:var(--color-white);
+
+    border:1px solid rgba(17,24,39,.06);
+
+    border-radius:var(--radius-lg);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+/* ==========================================================
+   SOLUTION CARD
+========================================================== */
+
+.solution-card{
+
+    position:relative;
+
+    min-height:150px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:30px;
+
+    background:var(--color-white);
+
+    border-radius:var(--radius-lg);
+
+    border:1px solid #e5e7eb;
+
+    color:var(--color-black);
+
+    font-size:var(--font-size-lg);
+
+    font-weight:var(--font-semibold);
+
+    text-align:center;
+
+    overflow:hidden;
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition),
+        color var(--transition);
+
+}
+
+
+.solution-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:3px;
+
+    background:var(--color-primary);
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:transform var(--transition);
+
+}
+
+
+.solution-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:rgba(227,6,19,.25);
+
+    box-shadow:var(--shadow-md);
+
+    color:var(--color-primary);
+
+}
+
+
+.solution-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:7px 14px;
+
+    border-radius:var(--radius-round);
+
+    font-size:var(--font-size-sm);
+
+    font-weight:var(--font-semibold);
+
+}
+
+
+.badge--primary{
+
+    background:#ffecec;
+
+    color:var(--color-primary);
+
+}
+
+
+.badge--dark{
+
+    background:var(--color-black);
+
+    color:var(--color-white);
+
+}
+
+
+/* ==========================================================
+   ÍCONES
+========================================================== */
+
+.icon-box{
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:var(--radius-md);
+
+    background:#fff0f1;
+
+    color:var(--color-primary);
+
+    font-size:24px;
+
+}
+
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+.link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--color-primary);
+
+    font-weight:var(--font-semibold);
+
+}
+
+
+.link:hover{
+
+    color:var(--color-primary-dark);
+
+}
+
+
+.link i{
+
+    transition:transform var(--transition-fast);
+
+}
+
+
+.link:hover i{
+
+    transform:translateX(4px);
+
+}
+
+
+/* ==========================================================
+   DIVISOR
+========================================================== */
+
+.divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:#e5e7eb;
+
+}
+
+
+/* ==========================================================
+   SCROLL OFFSET
+========================================================== */
+
+[id]{
+
+    scroll-margin-top:
+        calc(var(--header-height) + 25px);
+
+}
