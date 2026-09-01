@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initSmoothScroll();
     initDashboardAnimation();
     initActiveNavigation();
+    initModalWhatsApp();
 
 });
 
@@ -472,6 +473,75 @@ function initActiveNavigation() {
         observer.observe(section);
 
     });
+
+}
+
+
+/* ==========================================================
+   MODAL E ENVIO PARA O WHATSAPP
+========================================================== */
+
+function initModalWhatsApp() {
+
+    const modal = document.getElementById("demoModal");
+    const openButtons = document.querySelectorAll(".open-modal-btn");
+    const closeButton = document.getElementById("closeModal");
+    const demoForm = document.getElementById("demoForm");
+
+    if (!modal) return;
+
+    // Abrir modal ao clicar nos botões de demonstração ou orçamento
+    if (openButtons.length > 0) {
+        openButtons.forEach(button => {
+            button.addEventListener("click", (e) => {
+                e.preventDefault();
+                modal.classList.add("active");
+            });
+        });
+    }
+
+    // Fechar modal pelo botão 'X'
+    if (closeButton) {
+        closeButton.addEventListener("click", () => {
+            modal.classList.remove("active");
+        });
+    }
+
+    // Fechar modal clicando fora da caixa de conteúdo
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("active");
+        }
+    });
+
+    // Enviar dados montando a URL do WhatsApp
+    if (demoForm) {
+        demoForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const company = document.getElementById("company").value.trim();
+            const interest = document.getElementById("interest").value;
+
+            // Número do WhatsApp da APK Soluções (DDD 61 + 995749898)
+            const phoneNumber = "5561995749898";
+
+            // Montagem da mensagem formatada
+            const message = `Olá! Meu nome é *${name}*, represento a empresa *${company}* e tenho interesse em saber mais sobre *${interest}*. Poderia me ajudar?`;
+
+            // Codifica a mensagem para o padrão de URL
+            const encodedMessage = encodeURIComponent(message);
+
+            // Abre o WhatsApp com a mensagem preenchida
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            window.open(whatsappURL, "_blank");
+
+            // Fecha o modal e limpa o formulário
+            modal.classList.remove("active");
+            demoForm.reset();
+        });
+    }
 
 }
 
