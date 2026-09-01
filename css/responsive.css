@@ -7,14 +7,14 @@
    DESKTOP GRANDE
 ========================================================== */
 
-@media (max-width:1400px){
+@media (max-width: 1400px){
 
     .container{
-        max-width:1140px;
+        max-width: 1140px;
     }
 
     .hero h1{
-        font-size:56px;
+        font-size: 56px;
     }
 
 }
@@ -23,33 +23,33 @@
    NOTEBOOK
 ========================================================== */
 
-@media (max-width:1200px){
+@media (max-width: 1200px){
 
     .hero__container{
-        grid-template-columns:1fr;
-        text-align:center;
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
     .hero__content{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .hero__dashboard{
-        margin-top:50px;
+        margin-top: 50px;
     }
 
     .transform__grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .solutions__grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .stats{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -58,39 +58,39 @@
    TABLET
 ========================================================== */
 
-@media (max-width:992px){
+@media (max-width: 992px){
 
     .header__nav{
-        display:none;
+        display: none;
     }
 
     .header__mobile{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        width:50px;
-        height:50px;
-        border-radius:12px;
-        background:var(--color-primary);
-        color:#FFF;
-        font-size:22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        background: var(--color-primary);
+        color: #FFF;
+        font-size: 22px;
     }
 
     .hero{
-        padding-top:140px;
+        padding-top: 140px;
     }
 
     .hero h1{
-        font-size:48px;
+        font-size: 48px;
     }
 
     .hero p{
-        font-size:18px;
+        font-size: 18px;
     }
 
     .footer__container{
-        grid-template-columns:1fr;
-        text-align:center;
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
 }
@@ -99,59 +99,59 @@
    MOBILE
 ========================================================== */
 
-@media (max-width:768px){
+@media (max-width: 768px){
 
     section{
-        padding:70px 0;
+        padding: 70px 0;
     }
 
     .container{
-        padding:0 20px;
+        padding: 0 20px;
     }
 
     .header{
-        height:75px;
+        height: 75px;
     }
 
     .header__logo{
-        font-size:20px;
+        font-size: 20px;
     }
 
     .btn{
-        width:100%;
+        width: 100%;
     }
 
     .hero__buttons{
-        width:100%;
-        flex-direction:column;
+        width: 100%;
+        flex-direction: column;
     }
 
     .hero h1{
-        font-size:38px;
+        font-size: 38px;
     }
 
     .section-title h2{
-        font-size:34px;
+        font-size: 34px;
     }
 
     .dashboard__cards{
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
     .transform__grid{
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
     .solutions__grid{
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
     .stats{
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
     .apkone__modules{
-        justify-content:flex-start;
+        justify-content: flex-start;
     }
 
 }
@@ -160,81 +160,81 @@
    CELULARES PEQUENOS
 ========================================================== */
 
-@media (max-width:480px){
+@media (max-width: 480px){
 
     .hero h1{
-        font-size:32px;
+        font-size: 32px;
     }
 
     .hero p{
-        font-size:16px;
+        font-size: 16px;
     }
 
     .section-title h2{
-        font-size:28px;
+        font-size: 28px;
     }
 
     .dashboard{
-        padding:20px;
+        padding: 20px;
     }
 
     .dashboard__card strong{
-        font-size:22px;
+        font-size: 22px;
     }
 
-} /* <-- CHAVE CORRIGIDA AQUI */
+}
 
 /* ==========================================================
-   MENU MOBILE (Ajustado e Organizado)
+   MENU MOBILE
 ========================================================== */
 
-@media (max-width:992px){
+@media (max-width: 992px){
 
     .header__nav{
-        position:absolute;
-        top:100%;
-        left:20px;
-        right:20px;
-        background:#FFFFFF;
-        border-radius:16px;
-        padding:20px;
-        box-shadow:var(--shadow-lg);
-        opacity:0;
-        visibility:hidden;
-        transform:translateY(-10px);
-        transition:
-            opacity .3s ease,
-            transform .3s ease,
+        position: absolute;
+        top: 100%;
+        left: 20px;
+        right: 20px;
+        background: #FFFFFF;
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: var(--shadow-lg);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: 
+            opacity .3s ease, 
+            transform .3s ease, 
             visibility .3s ease;
     }
 
     .header__nav.active{
-        opacity:1;
-        visibility:visible;
-        transform:translateY(0);
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     .header__menu{
-        flex-direction:column;
-        gap:5px;
+        flex-direction: column;
+        gap: 5px;
     }
 
     .header__menu a{
-        display:block;
-        padding:14px;
-        border-radius:10px;
+        display: block;
+        padding: 14px;
+        border-radius: 10px;
     }
 
     .header__menu a:hover{
-        background:#FFF0F1;
+        background: #FFF0F1;
     }
 
     .header__menu a::after{
-        display:none;
+        display: none;
     }
 
     .header__mobile.active{
-        transform:rotate(90deg);
+        transform: rotate(90deg);
     }
 
 }
